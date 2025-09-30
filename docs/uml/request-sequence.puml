@@ -1,0 +1,24 @@
+@startuml
+title Search flow (CLI)
+
+actor User
+participant CLI as "bin/search.php"
+participant Service as "SearchAccommodationsService"
+participant Repo as "AccommodationRepository (PDO)"
+database DB as "MySQL"
+participant I18N as "Translator"
+
+User -> CLI: type first 3 letters
+CLI -> Service: execute(prefix, locale)
+Service -> Repo: searchByNamePrefix(prefix, limit)
+Repo -> DB: SELECT ... WHERE name LIKE 'pre%'
+DB --> Repo: rows (Hotel/Apartment)
+Repo --> Service: entities
+Service -> I18N: localize(room types, labels)
+I18N --> Service: localized strings
+Service --> CLI: list of lines
+CLI --> User: print lines
+
+@enduml
+
+

@@ -1,0 +1,21 @@
+{
+  "labels": {
+    "stars": "星级",
+    "apartments": "公寓",
+    "adults": "成人",
+    "standard_room": "标准房"
+  },
+  "roomTypes": {
+    "single": "单人间",
+    "double": "双人间",
+    "double_view": "观景双人间",
+    "suite": "套房",
+    "family": "家庭房"
+  },
+  "entities": {
+    "hotel": "酒店",
+    "apartments": "公寓"
+  }
+}
+
+

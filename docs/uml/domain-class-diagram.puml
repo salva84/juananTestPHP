@@ -1,0 +1,50 @@
+@startuml
+title Domain Model - Accommodation Search
+
+abstract class Accommodation {
+  +id: int
+  +name: string
+  +location: Location
+  +getDisplayName(): string
+}
+
+class Hotel extends Accommodation {
+  +stars: int
+  +standardRoomType: RoomType
+}
+
+class Apartment extends Accommodation {
+  +numUnits: int
+  +capacityAdults: int
+}
+
+class Location {
+  +city: string
+  +province: string
+}
+
+enum RoomType {
+  SINGLE
+  DOUBLE
+  DOUBLE_VIEW
+  SUITE
+  FAMILY
+}
+
+interface AccommodationRepository {
+  +searchByNamePrefix(prefix: string, limit: int): List<Accommodation>
+}
+
+class SearchAccommodationsService {
+  +execute(prefix: string, locale: string): List<string>
+}
+
+Accommodation <|-- Hotel
+Accommodation <|-- Apartment
+Accommodation o-- Location
+SearchAccommodationsService ..> AccommodationRepository
+SearchAccommodationsService ..> RoomType
+
+@enduml
+
+

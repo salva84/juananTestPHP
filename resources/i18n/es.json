@@ -1,0 +1,21 @@
+{
+  "labels": {
+    "stars": "estrellas",
+    "apartments": "apartamentos",
+    "adults": "adultos",
+    "standard_room": "habitación estándar"
+  },
+  "roomTypes": {
+    "single": "sencilla",
+    "double": "doble",
+    "double_view": "doble con vistas",
+    "suite": "suite",
+    "family": "familiar"
+  },
+  "entities": {
+    "hotel": "Hotel",
+    "apartments": "Apartamentos"
+  }
+}
+
+

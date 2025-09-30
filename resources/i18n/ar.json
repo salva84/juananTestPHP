@@ -1,0 +1,21 @@
+{
+  "labels": {
+    "stars": "نجوم",
+    "apartments": "شقق",
+    "adults": "بالغون",
+    "standard_room": "غرفة قياسية"
+  },
+  "roomTypes": {
+    "single": "مفردة",
+    "double": "مزدوجة",
+    "double_view": "مزدوجة بإطلالة",
+    "suite": "جناح",
+    "family": "عائلية"
+  },
+  "entities": {
+    "hotel": "فندق",
+    "apartments": "شقق"
+  }
+}
+
+
