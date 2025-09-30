@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\I18n;
 
-class Translator
+class Translator implements TranslatorInterface
 {
     private array $catalogs = [];
     private string $fallbackLocale = 'en';

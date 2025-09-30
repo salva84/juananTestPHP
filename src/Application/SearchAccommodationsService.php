@@ -5,13 +5,13 @@ namespace App\Application;
 
 use App\Domain\Accommodation;
 use App\Domain\AccommodationRepository;
-use App\Infrastructure\I18n\Translator;
+use App\Infrastructure\I18n\TranslatorInterface;
 
 class SearchAccommodationsService
 {
     public function __construct(
         private readonly AccommodationRepository $accommodationRepository,
-        private readonly Translator $translator
+        private readonly TranslatorInterface $translator
     ) {
     }
 
